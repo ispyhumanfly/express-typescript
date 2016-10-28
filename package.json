@@ -1,0 +1,33 @@
+{
+  "name": "express-typescript",
+  "version": "0.0.1",
+  "description": "TypeScript Views for Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ispyhumanfly/express-typescript.git"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "view",
+    "engine",
+    "template",
+    "render"
+  ],
+  "author": "Dan Stephenson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ispyhumanfly/express-typescript/issues"
+  },
+  "homepage": "https://github.com/ispyhumanfly/express-typescript#readme",
+  "dependencies": {
+    "typescript": "^2.0.6",
+    "typescript-compiler": "^1.4.1-2",
+    "typings": "^1.4.0",
+    "uglify-js": "^2.7.4"
+  }
+}
