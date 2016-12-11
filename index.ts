@@ -1,16 +1,18 @@
 // express-typescript - TypeScript View Engine for Express
+/* tslint: enabled */
 
-"use strict";
+"use strict"
 
-var tsc     = require("typescript-compiler");
-var fs      = require("fs");
-var uglify  = require("uglify-js");
+import * as tsc from "typescript-compiler"
+import * as fs from "fs"
+import * as uglify from "uglify-js"
 
-exports.renderFile = function (filePath, options, callback) {
-    fs.readFile(filePath, function (err, content) {
-        
+export function renderFile (file, options, callback) {
+    fs.readFile(file, function (err, content) {
+
         if (err) return callback(new Error(err))
-        var result = uglify.minify(tsc.compileString(fs), {fromString: true});
-        return callback(null, result.code);
+
+        let result = uglify.minify(tsc.compileString(fs), {fromString: true})
+        return callback(null, result.code)
     })
 }
