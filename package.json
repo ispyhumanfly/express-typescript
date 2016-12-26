@@ -4,7 +4,14 @@
   "description": "TypeScript Views for Express",
   "main": "dist/index.js",
   "scripts": {
-    "test": "node_modules/bin/jasmine -w"
+    "jasmine" : "node_modules/.bin/jasmine",
+    "tsc" : "node_modules/.bin/tsc",
+    "typings" : "node_modules/.bin/typings",
+    "prepublish" : "npm run build",
+    "postinstall" : "npm run typings install dt~node dt~express",
+    "test": "npm run jasmine -w",
+    "build": "npm run tsc index.ts ;; mv index.js dist/index.js"
+
   },
   "repository": {
     "type": "git",
