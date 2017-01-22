@@ -9,7 +9,7 @@ import * as fs from "fs"
 // const uglify = require("uglify-js")
 
 export function renderFile (file, options, callback) {
-    fs.readFile(file, function (err, content) {
+    fs.readFile(file, (err, content) => {
 
         if (err) return callback(new Error(err))
 
